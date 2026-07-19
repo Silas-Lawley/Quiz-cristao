@@ -1,0 +1,18 @@
+{
+  "name": "quiz-cristao",
+  "version": "1.0.0",
+  "description": "Quiz Cristao - bot de quiz biblico diario via WhatsApp (Twilio). 3 perguntas por dia, correcao, encerramento as 20h e resumo de desempenho.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "twilio": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

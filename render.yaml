@@ -1,0 +1,34 @@
+# Blueprint do Render (https://render.com/docs/blueprint-spec)
+# Ao conectar o repositorio que contem este arquivo na raiz, o Render vai
+# sugerir criar automaticamente o servico abaixo, ja com o disco persistente
+# configurado.
+services:
+  - type: web
+    name: quiz-cristao
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    disk:
+      name: quiz-cristao-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_NUMBER
+        value: whatsapp:+14155238886
+      - key: GROUP_NAME
+        value: Quiz Cristão
+      - key: TIMEZONE
+        value: America/Sao_Paulo
+      - key: DAILY_CRON
+        value: "0 8 * * *"
+      - key: CLOSE_CRON
+        value: "0 20 * * *"
+      - key: DATA_DIR
+        value: /data
+      - key: PORT
+        value: "3000"
