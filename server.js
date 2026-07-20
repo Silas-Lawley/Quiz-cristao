@@ -276,6 +276,137 @@ app.post('/admin/close-day', async (req, res) => {
   res.json({ ok: true });
 });
 
+// ---------- Painel de estatisticas (protegido por token) ----------
+function maskPhone(phone) {
+  // whatsapp:+5511999998888 -> +55 11 9****-8888 (aproximado, so pra nao expor o numero inteiro)
+  const digits = phone.replace('whatsapp:', '');
+  if (digits.length <= 4) return digits;
+  return digits.slice(0, -8) + '****' + digits.slice(-4);
+}
+
+function buildStatsHTML() {
+  const users = store.getAllUsersRaw();
+  const dayStats = store.getAllDayStats();
+  const activeUsers = users.filter(u => u.active);
+
+  const totalEver = users.length;
+  const totalActive = activeUsers.length;
+
+  const dayKeys = Object.keys(dayStats).sort().reverse();
+
+  // participacao por dia + acumulado por categoria
+  let globalCorrect = 0;
+  let globalTotal = 0;
+  const categoryAcc = {}; // cat -> {correct, total}
+
+  const dayRows = dayKeys.map(dk => {
+    const meta = dayStats[dk];
+    const stats = meta.questionStats || [];
+    const [y, m, d] = dk.split('-').map(Number);
+    const dateObj = new Date(y, m - 1, d);
+    let questions = [];
+    try {
+      questions = quiz.getTodaysQuestions(dateObj);
+    } catch (e) {
+      questions = [];
+    }
+    let dayCorrect = 0;
+    let dayTotal = 0;
+    stats.forEach((s, i) => {
+      dayCorrect += s.correct || 0;
+      dayTotal += s.total || 0;
+      globalCorrect += s.correct || 0;
+      globalTotal += s.total || 0;
+      const cat = questions[i] ? questions[i].cat : 'desconhecida';
+      if (!categoryAcc[cat]) categoryAcc[cat] = { correct: 0, total: 0 };
+      categoryAcc[cat].correct += s.correct || 0;
+      categoryAcc[cat].total += s.total || 0;
+    });
+    const participantes = stats.length > 0 ? Math.max(...stats.map(s => s.total || 0)) : 0;
+    const pct = dayTotal > 0 ? Math.round((dayCorrect / dayTotal) * 100) : 0;
+    return { dk, participantes, pct, closed: !!meta.closed };
+  });
+
+  const globalPct = globalTotal > 0 ? Math.round((globalCorrect / globalTotal) * 100) : 0;
+
+  const catLabels = quiz.CATEGORY_LABELS || {};
+  const categoryRows = Object.entries(categoryAcc)
+    .map(([cat, s]) => ({
+      cat: catLabels[cat] || cat,
+      pct: s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0,
+      total: s.total,
+    }))
+    .sort((a, b) => b.total - a.total);
+
+  const topStreaks = users
+    .slice()
+    .sort((a, b) => (b.streak || 0) - (a.streak || 0))
+    .slice(0, 5)
+    .map(u => ({ phone: maskPhone(u.phone), streak: u.streak || 0, daysPlayed: (u.daysPlayed || []).length }));
+
+  const rowsHtml = dayRows
+    .slice(0, 30)
+    .map(
+      r => `<tr><td>${r.dk}${r.closed ? '' : ' <span class="tag">em andamento</span>'}</td><td>${r.participantes}</td><td>${r.pct}%</td></tr>`
+    )
+    .join('');
+
+  const catHtml = categoryRows
+    .map(c => `<tr><td>${c.cat}</td><td>${c.pct}%</td><td>${c.total}</td></tr>`)
+    .join('');
+
+  const streakHtml = topStreaks
+    .map(s => `<tr><td>${s.phone}</td><td>${s.streak} dia(s)</td><td>${s.daysPlayed}</td></tr>`)
+    .join('');
+
+  return `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Estatísticas — ${GROUP_NAME}</title>
+<style>
+  body { font-family: Georgia, serif; background: #f4efe6; color: #2c2a26; padding: 24px; max-width: 780px; margin: 0 auto; }
+  h1 { color: #8a6a22; }
+  h2 { color: #8a6a22; margin-top: 32px; font-size: 1.1rem; }
+  .cards { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+  .card { background: #fff; border: 1px solid #e6ddca; border-radius: 10px; padding: 14px 18px; min-width: 140px; }
+  .card .num { font-size: 1.6rem; font-weight: bold; color: #8a6a22; display: block; }
+  .card .label { font-size: 0.8rem; color: #6b675f; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e6ddca; border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e6ddca; font-size: 0.9rem; }
+  th { background: #faf6ec; }
+  .tag { font-size: 0.7rem; color: #a9812e; }
+</style>
+</head>
+<body>
+  <h1>📊 Estatísticas — ${GROUP_NAME}</h1>
+  <div class="cards">
+    <div class="card"><span class="num">${totalActive}</span><span class="label">Inscritos ativos</span></div>
+    <div class="card"><span class="num">${totalEver}</span><span class="label">Já se inscreveram (total)</span></div>
+    <div class="card"><span class="num">${dayKeys.length}</span><span class="label">Dias com atividade</span></div>
+    <div class="card"><span class="num">${globalPct}%</span><span class="label">Acerto geral (${globalCorrect}/${globalTotal})</span></div>
+  </div>
+
+  <h2>Participação por dia (últimos 30)</h2>
+  <table><tr><th>Dia</th><th>Participantes</th><th>% acerto do dia</th></tr>${rowsHtml || '<tr><td colspan="3">Sem dados ainda.</td></tr>'}</table>
+
+  <h2>Acerto por categoria</h2>
+  <table><tr><th>Categoria</th><th>% acerto</th><th>Respostas</th></tr>${catHtml || '<tr><td colspan="3">Sem dados ainda.</td></tr>'}</table>
+
+  <h2>Maiores sequências (streak)</h2>
+  <table><tr><th>Usuário</th><th>Sequência</th><th>Dias jogados</th></tr>${streakHtml || '<tr><td colspan="3">Sem dados ainda.</td></tr>'}</table>
+</body>
+</html>`;
+}
+
+app.get('/admin/stats', (req, res) => {
+  const token = process.env.ADMIN_TOKEN;
+  if (token && req.query.token !== token) {
+    return res.status(401).send('Acesso negado. Adicione ?token=SEU_TOKEN na URL.');
+  }
+  res.type('text/html').send(buildStatsHTML());
+});
+
 app.get('/', (req, res) => {
   res.send(`${GROUP_NAME} - servidor rodando.`);
 });

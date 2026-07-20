@@ -129,6 +129,15 @@ function getAllActiveUsers() {
   return Object.values(all).filter(u => u.active);
 }
 
+function getAllUsersRaw() {
+  const all = loadAll();
+  return Object.values(all);
+}
+
+function getAllDayStats() {
+  return loadStats();
+}
+
 function unsubscribe(phone) {
   return updateUser(phone, { active: false });
 }
@@ -142,6 +151,8 @@ module.exports = {
   getOrCreateUser,
   updateUser,
   getAllActiveUsers,
+  getAllUsersRaw,
+  getAllDayStats,
   unsubscribe,
   resubscribe,
   getDayMeta,
