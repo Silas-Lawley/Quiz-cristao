@@ -95,6 +95,10 @@ async function handleIncoming(from, bodyRaw, bodyLower) {
     return handleAnswer(user, bodyRaw);
   }
 
+  if (user.awaitingContinue) {
+    return handleContinue(user, bodyLower);
+  }
+
   // já respondeu hoje ou nao esta em meio a uma pergunta
   if (user.daysPlayed.includes(todayKey)) {
     return `Voce ja concluiu o quiz de hoje! Volte amanha para novas perguntas. Envie *SAIR* se quiser cancelar as notificacoes.`;
@@ -144,13 +148,14 @@ function handleAnswer(user, bodyRaw) {
 
   const nextIndex = idx + 1;
   if (nextIndex < questions.length) {
+    // nao envia a proxima pergunta ainda: corrige primeiro e espera confirmacao
     store.updateUser(user.phone, {
       currentQuestionIndex: nextIndex,
       correctToday: newCorrectToday,
-      awaitingAnswer: true,
+      awaitingAnswer: false,
+      awaitingContinue: true,
     });
-    const nextQ = quiz.formatQuestion(questions[nextIndex], nextIndex, questions.length);
-    return `${feedback}\n\n${nextQ}`;
+    return `${feedback}\n\nDeseja continuar para a próxima pergunta? Responda *SIM* para continuar.`;
   }
 
   // ultima pergunta do dia: fecha o quiz e monta resumo
@@ -173,6 +178,25 @@ function handleAnswer(user, bodyRaw) {
 
   const summary = quiz.formatSummary(updated, newCorrectToday, questions.length);
   return `${feedback}\n\n${summary}`;
+}
+
+const AFFIRMATIVE_WORDS = ['sim', 's', 'continuar', 'ok', 'proxima', 'próxima', 'vamos', 'bora', 'yes'];
+
+function handleContinue(user, bodyLower) {
+  if (!AFFIRMATIVE_WORDS.includes(bodyLower)) {
+    return `Não entendi. Responda *SIM* para ver a próxima pergunta, ou *SAIR* para cancelar as notificações.`;
+  }
+
+  const todayKey = quiz.dayKey(new Date());
+  if (store.isDayClosed(todayKey)) {
+    store.updateUser(user.phone, { awaitingContinue: false });
+    return `⏰ As perguntas de hoje ja foram encerradas as 20h. O resumo com o indice de acerto ja foi enviado. Volte amanha as 8h!`;
+  }
+
+  const questions = quiz.getTodaysQuestions(new Date());
+  const idx = user.currentQuestionIndex;
+  store.updateUser(user.phone, { awaitingContinue: false, awaitingAnswer: true });
+  return quiz.formatQuestion(questions[idx], idx, questions.length);
 }
 
 // ---------- Alerta diario (envio proativo) ----------
@@ -220,8 +244,11 @@ async function closeDayAndBroadcast() {
   console.log(`Encerrando o dia ${todayKey} e enviando resumo para ${users.length} usuario(s)...`);
 
   for (const user of users) {
-    // se alguem ainda estava no meio de uma pergunta, encerra a sessao dele
-    if (user.awaitingAnswer) store.updateUser(user.phone, { awaitingAnswer: false });
+    // se alguem ainda estava no meio de uma pergunta (ou esperando confirmar
+    // a proxima), encerra a sessao dele
+    if (user.awaitingAnswer || user.awaitingContinue) {
+      store.updateUser(user.phone, { awaitingAnswer: false, awaitingContinue: false });
+    }
     try {
       await sendWhatsApp(user.phone, broadcast);
     } catch (err) {

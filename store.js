@@ -91,6 +91,7 @@ function defaultUser(phone) {
     currentQuestionIndex: 0,   // 0,1,2
     correctToday: 0,
     awaitingAnswer: false,
+    awaitingContinue: false,   // true = ja corrigiu a pergunta, esperando "SIM" pra ir pra proxima
     lastDailyAlertKey: null,   // ultimo dia em que recebeu o alerta
     // historico
     daysPlayed: [],            // lista de dayKeys já concluidos
