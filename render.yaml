@@ -20,6 +20,8 @@ services:
         sync: false
       - key: ADMIN_TOKEN
         sync: false
+      - key: TWILIO_SANDBOX_JOIN_CODE
+        value: recall-shot
       - key: TWILIO_WHATSAPP_NUMBER
         value: whatsapp:+14155238886
       - key: GROUP_NAME

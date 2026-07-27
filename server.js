@@ -57,6 +57,13 @@ app.post('/whatsapp', async (req, res) => {
 async function handleIncoming(from, bodyRaw, bodyLower) {
   let user = store.getUser(from);
 
+  // registra que recebemos contato dessa pessoa agora (prova de que a sessao
+  // do sandbox da Twilio ainda esta ativa) - usado pelo lembrete de rejoin
+  if (user) {
+    store.updateUser(from, { lastInboundAt: new Date().toISOString() });
+    user = store.getUser(from);
+  }
+
   // ---- Palavras-chave gerais ----
   if (['sair', 'parar', 'cancelar', 'stop'].includes(bodyLower)) {
     if (user) store.unsubscribe(from);
@@ -270,11 +277,66 @@ async function closeDayAndBroadcast() {
   store.updateDayMeta(todayKey, { summarySent: true });
 }
 
+// ---------- Lembrete de reenvio do "join" do sandbox (expira a cada 3 dias) ----------
+// Isso e uma regra da propria Twilio (nao tem a ver com deploys ou mudancas no
+// codigo): quem nao manda nenhuma mensagem por 3 dias precisa reenviar o
+// "join <codigo>" pro numero do sandbox. Avisamos um pouco antes de expirar.
+const SANDBOX_JOIN_CODE = process.env.TWILIO_SANDBOX_JOIN_CODE || 'SEU-CODIGO-AQUI';
+const SANDBOX_NUMBER_DISPLAY = '+1 415 523 8886';
+const REJOIN_WARNING_MIN_HOURS = 48;
+const REJOIN_WARNING_MAX_HOURS = 72;
+const REJOIN_REMINDER_COOLDOWN_HOURS = 60;
+
+async function checkRejoinReminders() {
+  const users = store.getAllActiveUsers();
+  const now = Date.now();
+  let sentCount = 0;
+
+  for (const user of users) {
+    const lastSeen = user.lastInboundAt || user.subscribedAt;
+    if (!lastSeen) continue;
+    const hoursSince = (now - new Date(lastSeen).getTime()) / 3600000;
+
+    const lastReminder = user.lastRejoinReminderSentAt;
+    const hoursSinceReminder = lastReminder ? (now - new Date(lastReminder).getTime()) / 3600000 : Infinity;
+
+    if (hoursSince >= REJOIN_WARNING_MIN_HOURS && hoursSince < REJOIN_WARNING_MAX_HOURS && hoursSinceReminder >= REJOIN_REMINDER_COOLDOWN_HOURS) {
+      try {
+        await sendWhatsApp(
+          user.phone,
+          `⚠️ Aviso da Twilio (não somos nós): sua sessão de teste do WhatsApp expira 3 dias após o último "join" e pode estar prestes a vencer.\n\n` +
+          `Para continuar recebendo o *${GROUP_NAME}* sem interrupção, envie novamente para ${SANDBOX_NUMBER_DISPLAY}:\n` +
+          `join ${SANDBOX_JOIN_CODE}\n\n` +
+          `Depois disso não precisa fazer mais nada — o quiz continua normalmente.`
+        );
+        store.updateUser(user.phone, { lastRejoinReminderSentAt: new Date().toISOString() });
+        sentCount++;
+      } catch (err) {
+        console.error(`Falha ao enviar lembrete de rejoin para ${user.phone}:`, err.message);
+      }
+    }
+  }
+
+  if (sentCount > 0) console.log(`[Lembrete rejoin] Enviado para ${sentCount} usuario(s).`);
+}
+
 const cronExpr = process.env.DAILY_CRON || '0 8 * * *';
 const closeCronExpr = process.env.CLOSE_CRON || '0 20 * * *';
 const timezone = process.env.TIMEZONE || 'America/Sao_Paulo';
-cron.schedule(cronExpr, sendDailyAlerts, { timezone });
-cron.schedule(closeCronExpr, closeDayAndBroadcast, { timezone });
+cron.schedule(cronExpr, async () => {
+  await sendDailyAlerts();
+  await checkRejoinReminders();
+}, { timezone });
+cron.schedule(closeCronExpr, async () => {
+  await closeDayAndBroadcast();
+  await checkRejoinReminders();
+}, { timezone });
+
+// ---------- Rota de teste manual do lembrete de rejoin ----------
+app.post('/admin/check-rejoin-reminders', async (req, res) => {
+  await checkRejoinReminders();
+  res.json({ ok: true });
+});
 
 // ---------- Rotas de teste manual ----------
 app.post('/admin/send-daily-alerts', async (req, res) => {

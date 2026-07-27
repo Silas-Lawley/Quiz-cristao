@@ -92,6 +92,8 @@ function defaultUser(phone) {
     correctToday: 0,
     awaitingAnswer: false,
     awaitingContinue: false,   // true = ja corrigiu a pergunta, esperando "SIM" pra ir pra proxima
+    lastInboundAt: new Date().toISOString(), // ultima mensagem recebida desse usuario (qualquer mensagem)
+    lastRejoinReminderSentAt: null,          // ultima vez que avisamos sobre reenviar o "join" do sandbox
     lastDailyAlertKey: null,   // ultimo dia em que recebeu o alerta
     // historico
     daysPlayed: [],            // lista de dayKeys já concluidos
