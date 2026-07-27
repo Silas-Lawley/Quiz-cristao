@@ -1,8 +1,24 @@
 const BANK = require('./questions');
 
 const PER_DAY = 3;
-const TOTAL_BLOCKS = Math.floor(BANK.length / PER_DAY);
 const EPOCH = new Date(2026, 0, 1); // mesma referencia usada no quiz web, mantem os dois sincronizados
+
+// Cada dia deve ter 2 perguntas faceis + 1 intermediaria. Separamos o banco em
+// duas "piscinas" por dificuldade e montamos os blocos diarios cruzando as duas,
+// em vez de simplesmente fatiar o array original em grupos de 3.
+const FACIL_POOL = BANK.filter(q => q.dificuldade === 'facil');
+const INTERMEDIARIA_POOL = BANK.filter(q => q.dificuldade === 'intermediaria');
+
+// numero de dias possiveis = quantos blocos completos de (2 faceis + 1 intermediaria)
+// da para montar sem repetir pergunta
+const TOTAL_BLOCKS = Math.min(Math.floor(FACIL_POOL.length / 2), INTERMEDIARIA_POOL.length);
+
+function buildDayBlock(blockIndex) {
+  const facil1 = FACIL_POOL[(blockIndex * 2) % FACIL_POOL.length];
+  const facil2 = FACIL_POOL[(blockIndex * 2 + 1) % FACIL_POOL.length];
+  const intermediaria = INTERMEDIARIA_POOL[blockIndex % INTERMEDIARIA_POOL.length];
+  return [facil1, facil2, intermediaria];
+}
 
 const CATEGORY_LABELS = {
   geral: 'Conhecimento Biblico',
@@ -30,7 +46,7 @@ function blockIndexForDate(date) {
 
 function getTodaysQuestions(date = new Date()) {
   const block = blockIndexForDate(date);
-  return BANK.slice(block * PER_DAY, block * PER_DAY + PER_DAY);
+  return buildDayBlock(block);
 }
 
 function formatQuestion(item, index, total) {

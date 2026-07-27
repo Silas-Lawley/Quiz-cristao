@@ -3,79 +3,85 @@ module.exports = [
     "cat": "geral",
     "q": "Quem construiu a arca para escapar do dilúvio?",
     "opts": [
-      "Abraão",
-      "Noé",
+      "Jó",
       "Moisés",
-      "Jó"
+      "Abraão",
+      "Noé"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Gênesis 6–9",
-    "exp": "Noé foi instruído por Deus a construir a arca para salvar sua família e os animais."
+    "exp": "Noé foi instruído por Deus a construir a arca para salvar sua família e os animais.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quantos dias e noites choveu durante o dilúvio?",
     "opts": [
-      "7 dias",
-      "10 dias",
       "40 dias",
+      "10 dias",
+      "7 dias",
       "100 dias"
     ],
-    "correct": 2,
+    "correct": 0,
     "ref": "Gênesis 7:12",
-    "exp": "A chuva caiu sobre a terra durante 40 dias e 40 noites."
+    "exp": "A chuva caiu sobre a terra durante 40 dias e 40 noites.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Qual é o primeiro livro da Bíblia?",
     "opts": [
-      "Êxodo",
-      "Gênesis",
+      "Salmos",
       "Levítico",
-      "Salmos"
+      "Gênesis",
+      "Êxodo"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Gênesis 1:1",
-    "exp": "Gênesis narra a criação e as origens do povo de Deus."
+    "exp": "Gênesis narra a criação e as origens do povo de Deus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem foi vendido como escravo pelos próprios irmãos?",
     "opts": [
-      "Benjamim",
       "Rúben",
       "José",
-      "Judá"
+      "Judá",
+      "Benjamim"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Gênesis 37",
-    "exp": "José foi vendido por seus irmãos, mas Deus usou isso para o bem, anos depois."
+    "exp": "José foi vendido por seus irmãos, mas Deus usou isso para o bem, anos depois.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem liderou o povo de Israel para fora do Egito?",
     "opts": [
       "Josué",
-      "Arão",
       "Moisés",
+      "Arão",
       "Calebe"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Livro de Êxodo",
-    "exp": "Moisés foi usado por Deus para libertar Israel da escravidão no Egito."
+    "exp": "Moisés foi usado por Deus para libertar Israel da escravidão no Egito.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quantos mandamentos Deus deu a Moisés no Monte Sinai?",
     "opts": [
-      "7",
       "10",
-      "12",
-      "5"
+      "5",
+      "7",
+      "12"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Êxodo 20",
-    "exp": "Os Dez Mandamentos foram dados como fundamento da lei moral de Israel."
+    "exp": "Os Dez Mandamentos foram dados como fundamento da lei moral de Israel.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
@@ -83,51 +89,55 @@ module.exports = [
     "opts": [
       "Josué",
       "Gideão",
-      "Sansão",
-      "Davi"
+      "Davi",
+      "Sansão"
     ],
     "correct": 0,
     "ref": "Josué 6",
-    "exp": "Após marcharem ao redor da cidade por 7 dias, os muros caíram pela fé e obediência."
+    "exp": "Após marcharem ao redor da cidade por 7 dias, os muros caíram pela fé e obediência.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem matou o gigante Golias com uma funda e uma pedra?",
     "opts": [
-      "Saul",
       "Jônatas",
-      "Davi",
-      "Salomão"
+      "Salomão",
+      "Saul",
+      "Davi"
     ],
-    "correct": 2,
+    "correct": 3,
     "ref": "1 Samuel 17",
-    "exp": "Davi, um jovem pastor, venceu o gigante confiando no Senhor dos exércitos."
+    "exp": "Davi, um jovem pastor, venceu o gigante confiando no Senhor dos exércitos.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem foi o rei mais sábio de Israel, autor de grande parte de Provérbios?",
     "opts": [
-      "Davi",
-      "Salomão",
       "Roboão",
-      "Ezequias"
+      "Davi",
+      "Ezequias",
+      "Salomão"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "1 Reis 3–4",
-    "exp": "Salomão pediu sabedoria a Deus e recebeu também riquezas e honra."
+    "exp": "Salomão pediu sabedoria a Deus e recebeu também riquezas e honra.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Em que cidade Jesus nasceu?",
     "opts": [
-      "Nazaré",
       "Jerusalém",
       "Belém",
+      "Nazaré",
       "Cafarnaum"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Mateus 2:1 / Lucas 2:4-7",
-    "exp": "Cumprindo a profecia de Miqueias 5:2, Jesus nasceu em Belém."
+    "exp": "Cumprindo a profecia de Miqueias 5:2, Jesus nasceu em Belém.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
@@ -140,85 +150,92 @@ module.exports = [
     ],
     "correct": 1,
     "ref": "Mateus 3:13-17",
-    "exp": "João Batista preparava o caminho do Senhor e batizou Jesus, ouvindo a voz do Pai dos céus."
+    "exp": "João Batista preparava o caminho do Senhor e batizou Jesus, ouvindo a voz do Pai dos céus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quantos discípulos (apóstolos) Jesus escolheu?",
     "opts": [
-      "7",
-      "10",
       "12",
+      "10",
+      "7",
       "70"
     ],
-    "correct": 2,
+    "correct": 0,
     "ref": "Mateus 10:1-4",
-    "exp": "Jesus escolheu doze apóstolos para segui-lo de perto e depois pregar o evangelho."
+    "exp": "Jesus escolheu doze apóstolos para segui-lo de perto e depois pregar o evangelho.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Qual foi o primeiro milagre de Jesus, segundo o evangelho de João?",
     "opts": [
-      "Curar um cego",
-      "Multiplicar pães",
       "Transformar água em vinho",
-      "Acalmar a tempestade"
+      "Curar um cego",
+      "Acalmar a tempestade",
+      "Multiplicar pães"
     ],
-    "correct": 2,
+    "correct": 0,
     "ref": "João 2:1-11",
-    "exp": "Nas bodas de Caná, Jesus transformou água em vinho, manifestando sua glória."
+    "exp": "Nas bodas de Caná, Jesus transformou água em vinho, manifestando sua glória.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Quem traiu Jesus por trinta moedas de prata?",
     "opts": [
-      "Tomé",
-      "Judas Iscariotes",
       "Mateus",
-      "Filipe"
+      "Judas Iscariotes",
+      "Filipe",
+      "Tomé"
     ],
     "correct": 1,
     "ref": "Mateus 26:14-16",
-    "exp": "Judas entregou Jesus aos principais sacerdotes por esse valor."
+    "exp": "Judas entregou Jesus aos principais sacerdotes por esse valor.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem negou conhecer Jesus três vezes antes do galo cantar?",
     "opts": [
-      "João",
       "Tiago",
       "Pedro",
+      "João",
       "André"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Mateus 26:69-75",
-    "exp": "Pedro negou Jesus por medo, mas depois foi restaurado e se tornou líder da igreja."
+    "exp": "Pedro negou Jesus por medo, mas depois foi restaurado e se tornou líder da igreja.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Em qual monte Jesus foi crucificado?",
     "opts": [
       "Monte Sinai",
-      "Monte das Oliveiras",
       "Gólgota (Calvário)",
+      "Monte das Oliveiras",
       "Monte Tabor"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "João 19:17-18",
-    "exp": "Gólgota significa 'lugar da caveira', onde Jesus foi crucificado fora da cidade."
+    "exp": "Gólgota significa 'lugar da caveira', onde Jesus foi crucificado fora da cidade.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Após quantos dias Jesus ressuscitou?",
     "opts": [
-      "1 dia",
-      "3 dias",
       "7 dias",
+      "3 dias",
+      "1 dia",
       "40 dias"
     ],
     "correct": 1,
     "ref": "1 Coríntios 15:4",
-    "exp": "Cristo ressuscitou ao terceiro dia, conforme as Escrituras."
+    "exp": "Cristo ressuscitou ao terceiro dia, conforme as Escrituras.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
@@ -226,337 +243,363 @@ module.exports = [
     "opts": [
       "Barnabé",
       "Paulo (Saulo de Tarso)",
-      "Timóteo",
-      "Silas"
+      "Silas",
+      "Timóteo"
     ],
     "correct": 1,
     "ref": "Atos 9:1-22",
-    "exp": "Saulo foi transformado no caminho de Damasco e passou a pregar o evangelho que antes perseguia."
+    "exp": "Saulo foi transformado no caminho de Damasco e passou a pregar o evangelho que antes perseguia.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Qual é o último livro da Bíblia?",
     "opts": [
-      "Judas",
-      "Apocalipse",
       "2 Pedro",
-      "3 João"
+      "3 João",
+      "Apocalipse",
+      "Judas"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Livro de Apocalipse",
-    "exp": "Apocalipse revela o triunfo final de Cristo e a nova criação."
+    "exp": "Apocalipse revela o triunfo final de Cristo e a nova criação.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem escreveu a maior parte das epístolas do Novo Testamento?",
     "opts": [
-      "Pedro",
       "João",
-      "Paulo",
-      "Tiago"
+      "Tiago",
+      "Pedro",
+      "Paulo"
     ],
-    "correct": 2,
+    "correct": 3,
     "ref": "Cartas paulinas",
-    "exp": "Paulo escreveu treze cartas, incluindo Romanos, Coríntios, Gálatas e Efésios."
+    "exp": "Paulo escreveu treze cartas, incluindo Romanos, Coríntios, Gálatas e Efésios.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Qual profeta foi engolido por um grande peixe?",
     "opts": [
-      "Isaías",
       "Jonas",
+      "Isaías",
       "Ezequiel",
       "Amós"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Jonas 1–2",
-    "exp": "Jonas fugiu do chamado de Deus, mas foi resgatado e pregou em Nínive."
+    "exp": "Jonas fugiu do chamado de Deus, mas foi resgatado e pregou em Nínive.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quem interpretou os sonhos do Faraó no Egito?",
     "opts": [
       "Moisés",
-      "Arão",
       "José",
-      "Davi"
+      "Davi",
+      "Arão"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Gênesis 41",
-    "exp": "José interpretou os sonhos sobre os sete anos de fartura e sete de fome."
+    "exp": "José interpretou os sonhos sobre os sete anos de fartura e sete de fome.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Quem foi lançado na cova dos leões por continuar orando a Deus?",
     "opts": [
       "Daniel",
-      "Ezequiel",
+      "Elias",
       "Sadraque",
-      "Elias"
+      "Ezequiel"
     ],
     "correct": 0,
     "ref": "Daniel 6",
-    "exp": "Daniel permaneceu fiel em oração mesmo sob ameaça de morte, e Deus o livrou."
+    "exp": "Daniel permaneceu fiel em oração mesmo sob ameaça de morte, e Deus o livrou.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Quantos livros tem o Novo Testamento?",
     "opts": [
       "24",
-      "27",
+      "66",
       "39",
-      "66"
+      "27"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Cânon do Novo Testamento",
-    "exp": "O Novo Testamento reúne 27 livros, dos Evangelhos ao Apocalipse."
+    "exp": "O Novo Testamento reúne 27 livros, dos Evangelhos ao Apocalipse.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Quem foi o irmão que matou Abel?",
     "opts": [
-      "Sete",
-      "Caim",
       "Enos",
-      "Cam"
+      "Sete",
+      "Cam",
+      "Caim"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Gênesis 4",
-    "exp": "Caim matou seu irmão Abel por inveja, sendo o primeiro homicídio da Bíblia."
+    "exp": "Caim matou seu irmão Abel por inveja, sendo o primeiro homicídio da Bíblia.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Em qual monte Abraão ia sacrificar seu filho Isaque?",
     "opts": [
-      "Monte Sinai",
-      "Monte Moriá",
       "Monte Carmelo",
-      "Monte Ararat"
+      "Monte Ararat",
+      "Monte Sinai",
+      "Monte Moriá"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Gênesis 22:2",
-    "exp": "Deus proveu um cordeiro no lugar de Isaque, prefigurando o sacrifício de Cristo."
+    "exp": "Deus proveu um cordeiro no lugar de Isaque, prefigurando o sacrifício de Cristo.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Qual apóstolo era conhecido como 'o discípulo amado'?",
     "opts": [
-      "Pedro",
-      "Tiago",
+      "André",
       "João",
-      "André"
+      "Tiago",
+      "Pedro"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "João 13:23; 21:20",
-    "exp": "João se refere a si mesmo dessa forma em seu evangelho."
+    "exp": "João se refere a si mesmo dessa forma em seu evangelho.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Quantos anos os israelitas vagaram no deserto antes de entrar na terra prometida?",
     "opts": [
       "10 anos",
-      "20 anos",
       "40 anos",
+      "20 anos",
       "100 anos"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Números 14:33-34",
-    "exp": "Por causa da desobediência, uma geração vagou 40 anos no deserto."
+    "exp": "Por causa da desobediência, uma geração vagou 40 anos no deserto.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "geral",
     "q": "Quem foi a primeira mulher, criada por Deus a partir da costela de Adão?",
     "opts": [
-      "Sara",
-      "Eva",
       "Rebeca",
-      "Raquel"
+      "Sara",
+      "Raquel",
+      "Eva"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Gênesis 2:22",
-    "exp": "Eva foi formada por Deus para ser auxiliadora e companheira de Adão."
+    "exp": "Eva foi formada por Deus para ser auxiliadora e companheira de Adão.",
+    "dificuldade": "facil"
   },
   {
     "cat": "geral",
     "q": "Qual rei teve um sonho com uma grande estátua feita de diferentes metais, interpretado por Daniel?",
     "opts": [
       "Ciro",
-      "Nabucodonosor",
       "Dario",
+      "Nabucodonosor",
       "Belsazar"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Daniel 2",
-    "exp": "Daniel interpretou o sonho como representando os reinos que se sucederiam na história."
+    "exp": "Daniel interpretou o sonho como representando os reinos que se sucederiam na história.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Efésios 2:8-9, pela graça somos salvos, mediante o quê?",
     "opts": [
-      "As obras",
       "A fé",
+      "Os sacrifícios",
       "A lei",
-      "Os sacrifícios"
+      "As obras"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Efésios 2:8-9",
-    "exp": "'Pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus; não vem das obras, para que ninguém se glorie.'"
+    "exp": "'Pela graça sois salvos, por meio da fé; e isto não vem de vós, é dom de Deus; não vem das obras, para que ninguém se glorie.'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Efésios 2:9, a salvação não vem de obras para que ninguém possa fazer o quê?",
     "opts": [
-      "Se gloriar",
-      "Descansar",
+      "Testemunhar",
       "Duvidar",
-      "Testemunhar"
+      "Descansar",
+      "Se gloriar"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Efésios 2:9",
-    "exp": "A salvação é dom de Deus justamente para que nenhum ser humano possa se orgulhar de merecê-la."
+    "exp": "A salvação é dom de Deus justamente para que nenhum ser humano possa se orgulhar de merecê-la.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Quem disse: 'Eu sou o caminho, a verdade e a vida; ninguém vem ao Pai, senão por mim'?",
     "opts": [
+      "Jesus",
       "João Batista",
       "Pedro",
-      "Jesus",
       "Paulo"
     ],
-    "correct": 2,
+    "correct": 0,
     "ref": "João 14:6",
-    "exp": "Jesus afirma ser o único mediador entre Deus e os homens."
+    "exp": "Jesus afirma ser o único mediador entre Deus e os homens.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo João 3:16, por que Deus enviou seu Filho ao mundo?",
     "opts": [
-      "Porque amou o mundo",
-      "Para julgar o mundo",
       "Para testar a humanidade",
+      "Para julgar o mundo",
+      "Porque amou o mundo",
       "Para punir os pecadores"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "João 3:16",
-    "exp": "'Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...'"
+    "exp": "'Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo João 3:16, o que acontece a quem crê no Filho de Deus?",
     "opts": [
-      "Fica rico",
       "Não sofre mais",
+      "Fica rico",
       "Tem vida eterna e não perece",
       "Vira profeta"
     ],
     "correct": 2,
     "ref": "João 3:16",
-    "exp": "'...para que todo aquele que nele crê não pereça, mas tenha a vida eterna.'"
+    "exp": "'...para que todo aquele que nele crê não pereça, mas tenha a vida eterna.'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Qual é o 'salário do pecado', segundo Romanos 6:23?",
     "opts": [
-      "A doença",
       "A morte",
-      "A pobreza",
-      "A vergonha"
+      "A vergonha",
+      "A doença",
+      "A pobreza"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Romanos 6:23",
-    "exp": "'Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus.'"
+    "exp": "'Porque o salário do pecado é a morte, mas o dom gratuito de Deus é a vida eterna em Cristo Jesus.'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Qual é o 'dom gratuito de Deus', segundo Romanos 6:23?",
     "opts": [
       "A vida eterna em Cristo Jesus",
-      "A riqueza material",
       "A sabedoria humana",
+      "A riqueza material",
       "A boa saúde"
     ],
     "correct": 0,
     "ref": "Romanos 6:23",
-    "exp": "Ao contrário do salário do pecado, a vida eterna é dada gratuitamente em Cristo."
+    "exp": "Ao contrário do salário do pecado, a vida eterna é dada gratuitamente em Cristo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Romanos 3:23, quem pecou e está destituído da glória de Deus?",
     "opts": [
-      "Somente os incrédulos",
-      "Todos",
       "Somente os líderes religiosos",
+      "Todos",
+      "Somente os incrédulos",
       "Ninguém"
     ],
     "correct": 1,
     "ref": "Romanos 3:23",
-    "exp": "'Porque todos pecaram e destituídos estão da glória de Deus.'"
+    "exp": "'Porque todos pecaram e destituídos estão da glória de Deus.'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Romanos 10:9, o que devemos fazer para sermos salvos?",
     "opts": [
       "Guardar a lei perfeitamente",
-      "Confessar Jesus como Senhor e crer que Deus o ressuscitou",
       "Fazer boas obras suficientes",
-      "Nascer em família cristã"
+      "Nascer em família cristã",
+      "Confessar Jesus como Senhor e crer que Deus o ressuscitou"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Romanos 10:9",
-    "exp": "A salvação é pela confissão de fé em Cristo e na sua ressurreição."
+    "exp": "A salvação é pela confissão de fé em Cristo e na sua ressurreição.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Segundo João 14:26, qual é o papel do Espírito Santo, o Consolador?",
     "opts": [
-      "Substituir Jesus",
       "Ensinar tudo e lembrar as palavras de Jesus",
-      "Julgar o mundo imediatamente",
-      "Revelar novas escrituras"
+      "Substituir Jesus",
+      "Revelar novas escrituras",
+      "Julgar o mundo imediatamente"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "João 14:26",
-    "exp": "O Espírito Santo ensina e faz lembrar tudo o que Jesus disse aos seus discípulos."
+    "exp": "O Espírito Santo ensina e faz lembrar tudo o que Jesus disse aos seus discípulos.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "O que se rasgou ao meio no momento da morte de Jesus, simbolizando acesso direto a Deus?",
     "opts": [
-      "O véu do templo",
-      "As vestes dos sacerdotes",
       "O céu",
-      "O altar"
+      "As vestes dos sacerdotes",
+      "O altar",
+      "O véu do templo"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Mateus 27:51",
-    "exp": "O véu rasgado simboliza que, por Cristo, todos podem se aproximar de Deus sem mediador humano."
+    "exp": "O véu rasgado simboliza que, por Cristo, todos podem se aproximar de Deus sem mediador humano.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo 1 Coríntios 15:3-4, o evangelho é que Cristo morreu, foi sepultado e...?",
     "opts": [
       "Subiu aos céus imediatamente",
-      "Ressuscitou ao terceiro dia",
       "Permaneceu no túmulo",
-      "Apareceu apenas em sonhos"
+      "Apareceu apenas em sonhos",
+      "Ressuscitou ao terceiro dia"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "1 Coríntios 15:3-4",
-    "exp": "A ressurreição de Cristo ao terceiro dia é o centro da mensagem do evangelho."
+    "exp": "A ressurreição de Cristo ao terceiro dia é o centro da mensagem do evangelho.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Quem disse: 'Não há salvação em nenhum outro, porque não há debaixo do céu nenhum outro nome... pelo qual devamos ser salvos'?",
     "opts": [
-      "Pedro",
+      "Tiago",
       "Estêvão",
       "Filipe",
-      "Tiago"
+      "Pedro"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Atos 4:12",
-    "exp": "Pedro pregou diante do Sinédrio que a salvação está somente em Jesus Cristo."
+    "exp": "Pedro pregou diante do Sinédrio que a salvação está somente em Jesus Cristo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
@@ -569,163 +612,176 @@ module.exports = [
     ],
     "correct": 1,
     "ref": "Tito 3:5",
-    "exp": "A salvação nasce da misericórdia de Deus, não do mérito humano."
+    "exp": "A salvação nasce da misericórdia de Deus, não do mérito humano.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Gálatas 5:22-23, qual destes é um fruto do Espírito?",
     "opts": [
-      "Orgulho",
-      "Amor",
       "Inveja",
-      "Rivalidade"
+      "Rivalidade",
+      "Orgulho",
+      "Amor"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Gálatas 5:22-23",
-    "exp": "O fruto do Espírito inclui amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão e domínio próprio."
+    "exp": "O fruto do Espírito inclui amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão e domínio próprio.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo 2 Coríntios 5:17, quem está em Cristo é uma nova o quê?",
     "opts": [
-      "Lei",
-      "Aliança apenas",
       "Criatura",
-      "Doutrina"
+      "Doutrina",
+      "Aliança apenas",
+      "Lei"
     ],
-    "correct": 2,
+    "correct": 0,
     "ref": "2 Coríntios 5:17",
-    "exp": "'Se alguém está em Cristo, nova criatura é: as coisas velhas já passaram; eis que tudo se fez novo.'"
+    "exp": "'Se alguém está em Cristo, nova criatura é: as coisas velhas já passaram; eis que tudo se fez novo.'",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "O que Jesus disse na cruz sobre os que o crucificavam?",
     "opts": [
-      "'Vingai-me, Pai'",
+      "'Eles merecem julgamento'",
       "'Pai, perdoa-lhes, porque não sabem o que fazem'",
       "Nada, ficou em silêncio",
-      "'Eles merecem julgamento'"
+      "'Vingai-me, Pai'"
     ],
     "correct": 1,
     "ref": "Lucas 23:34",
-    "exp": "Mesmo na cruz, Jesus demonstrou graça e perdão."
+    "exp": "Mesmo na cruz, Jesus demonstrou graça e perdão.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Atos 1:8, o que os discípulos receberiam ao vir sobre eles o Espírito Santo?",
     "opts": [
-      "Riquezas",
       "Poder para serem testemunhas de Cristo",
-      "Autoridade política",
-      "Longevidade"
+      "Riquezas",
+      "Longevidade",
+      "Autoridade política"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Atos 1:8",
-    "exp": "O Espírito Santo capacita a igreja para testemunhar de Cristo a todas as nações."
+    "exp": "O Espírito Santo capacita a igreja para testemunhar de Cristo a todas as nações.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Qual mandamento Jesus chamou de 'o maior e o primeiro'?",
     "opts": [
-      "Não matar",
-      "Amar a Deus sobre todas as coisas",
+      "Honrar pai e mãe",
       "Guardar o sábado",
-      "Honrar pai e mãe"
+      "Amar a Deus sobre todas as coisas",
+      "Não matar"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Mateus 22:37-38",
-    "exp": "Jesus resume a lei no amor a Deus e ao próximo."
+    "exp": "Jesus resume a lei no amor a Deus e ao próximo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Qual é o segundo maior mandamento, segundo Jesus?",
     "opts": [
-      "Amar o próximo como a si mesmo",
-      "Jejuar regularmente",
       "Dar dízimos",
-      "Não roubar"
+      "Não roubar",
+      "Jejuar regularmente",
+      "Amar o próximo como a si mesmo"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Mateus 22:39",
-    "exp": "Amar ao próximo como a si mesmo resume a segunda tábua da lei."
+    "exp": "Amar ao próximo como a si mesmo resume a segunda tábua da lei.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Hebreus 9:22, sem derramamento de sangue não há o quê?",
     "opts": [
-      "Aliança",
-      "Remissão (perdão de pecados)",
+      "Sacerdócio",
       "Templo",
-      "Sacerdócio"
+      "Remissão (perdão de pecados)",
+      "Aliança"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Hebreus 9:22",
-    "exp": "O sacrifício de Cristo cumpriu definitivamente o que os sacrifícios do Antigo Testamento apontavam."
+    "exp": "O sacrifício de Cristo cumpriu definitivamente o que os sacrifícios do Antigo Testamento apontavam.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Filipenses 2:7, Jesus, sendo em forma de Deus, se esvaziou a si mesmo tomando a forma de quê?",
     "opts": [
       "Rei",
+      "Sacerdote",
       "Anjo",
-      "Servo",
-      "Sacerdote"
+      "Servo"
     ],
-    "correct": 2,
+    "correct": 3,
     "ref": "Filipenses 2:6-7",
-    "exp": "Cristo se humilhou, tornando-se servo e obediente até a morte de cruz."
+    "exp": "Cristo se humilhou, tornando-se servo e obediente até a morte de cruz.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "O que Jesus prometeu ao ladrão arrependido na cruz?",
     "opts": [
       "'Hoje estarás comigo no paraíso'",
-      "'Serás liberto amanhã'",
       "'Tua família será abençoada'",
+      "'Serás liberto amanhã'",
       "Nada, permaneceu calado"
     ],
     "correct": 0,
     "ref": "Lucas 23:43",
-    "exp": "Jesus concedeu salvação instantânea ao ladrão que confessou fé, mostrando a graça pela fé, sem obras."
+    "exp": "Jesus concedeu salvação instantânea ao ladrão que confessou fé, mostrando a graça pela fé, sem obras.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Gálatas 2:20, Paulo disse: 'já não sou eu quem vive, mas...'?",
     "opts": [
-      "Cristo vive em mim",
-      "A lei vive em mim",
       "Meu passado vive em mim",
-      "Ninguém vive em mim"
+      "A lei vive em mim",
+      "Ninguém vive em mim",
+      "Cristo vive em mim"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Gálatas 2:20",
-    "exp": "Paulo descreve a nova identidade do crente, unido a Cristo."
+    "exp": "Paulo descreve a nova identidade do crente, unido a Cristo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Qual é a definição de fé segundo Hebreus 11:1?",
     "opts": [
       "Um sentimento passageiro",
-      "A certeza das coisas que se esperam e a convicção de fatos que se não veem",
+      "Um conjunto de regras",
       "Uma tradição religiosa",
-      "Um conjunto de regras"
+      "A certeza das coisas que se esperam e a convicção de fatos que se não veem"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Hebreus 11:1",
-    "exp": "A fé bíblica é confiança firme em Deus e em suas promessas, mesmo sem ver."
+    "exp": "A fé bíblica é confiança firme em Deus e em suas promessas, mesmo sem ver.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Segundo 1 João 1:9, se confessarmos os nossos pecados, o que Deus faz?",
     "opts": [
-      "Ignora",
       "É fiel e justo para nos perdoar e purificar",
+      "Julga imediatamente",
       "Espera mais provas",
-      "Julga imediatamente"
+      "Ignora"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "1 João 1:9",
-    "exp": "Deus é fiel para perdoar todo aquele que confessa seus pecados com sinceridade."
+    "exp": "Deus é fiel para perdoar todo aquele que confessa seus pecados com sinceridade.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
@@ -733,220 +789,237 @@ module.exports = [
     "opts": [
       "Transfiguração",
       "Pentecostes",
-      "Ascensão",
-      "Purificação"
+      "Purificação",
+      "Ascensão"
     ],
     "correct": 1,
     "ref": "Atos 2",
-    "exp": "Em Pentecostes, o Espírito Santo foi derramado, dando início à igreja."
+    "exp": "Em Pentecostes, o Espírito Santo foi derramado, dando início à igreja.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Apocalipse 3:20, o que Jesus está fazendo 'à porta'?",
     "opts": [
-      "Observando em silêncio",
-      "Batendo, esperando que alguém o ouça e abra",
+      "Construindo",
       "Indo embora",
-      "Construindo"
+      "Batendo, esperando que alguém o ouça e abra",
+      "Observando em silêncio"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Apocalipse 3:20",
-    "exp": "Jesus convida cada pessoa a abrir o coração e ter comunhão com ele."
+    "exp": "Jesus convida cada pessoa a abrir o coração e ter comunhão com ele.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "evangelho",
     "q": "Qual é a 'grande comissão' dada por Jesus em Mateus 28:19?",
     "opts": [
       "Construir templos",
+      "Esperar em Jerusalém para sempre",
       "Ir e fazer discípulos de todas as nações, batizando-os",
-      "Reunir riquezas para a igreja",
-      "Esperar em Jerusalém para sempre"
+      "Reunir riquezas para a igreja"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Mateus 28:19-20",
-    "exp": "Jesus ordena à igreja levar o evangelho a todas as nações, batizando e ensinando."
+    "exp": "Jesus ordena à igreja levar o evangelho a todas as nações, batizando e ensinando.",
+    "dificuldade": "facil"
   },
   {
     "cat": "evangelho",
     "q": "Segundo Romanos 5:8, como Deus prova o seu amor por nós?",
     "opts": [
-      "Cristo morreu por nós, sendo nós ainda pecadores",
       "Nos dando riqueza",
-      "Nos protegendo de todo sofrimento",
-      "Nos dando uma lei perfeita"
+      "Cristo morreu por nós, sendo nós ainda pecadores",
+      "Nos dando uma lei perfeita",
+      "Nos protegendo de todo sofrimento"
     ],
-    "correct": 0,
+    "correct": 1,
     "ref": "Romanos 5:8",
-    "exp": "Deus demonstra seu amor ao enviar Cristo para morrer por pecadores, antes mesmo do arrependimento."
+    "exp": "Deus demonstra seu amor ao enviar Cristo para morrer por pecadores, antes mesmo do arrependimento.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Quem foi o sacerdote e rei de Salém que abençoou Abraão, a quem Abraão deu o dízimo de tudo?",
     "opts": [
+      "Labão",
       "Jetro",
       "Melquisedeque",
-      "Labão",
       "Balaão"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Gênesis 14:18-20",
-    "exp": "Melquisedeque é uma figura misteriosa, rei-sacerdote, vista como um tipo (prefiguração) de Cristo em Hebreus 7."
+    "exp": "Melquisedeque é uma figura misteriosa, rei-sacerdote, vista como um tipo (prefiguração) de Cristo em Hebreus 7.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "personagens",
     "q": "Quem se transformou em estátua de sal ao olhar para trás enquanto fugia de Sodoma?",
     "opts": [
-      "A esposa de Ló",
-      "Sara",
       "Agar",
-      "Tamar"
+      "Tamar",
+      "A esposa de Ló",
+      "Sara"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "Gênesis 19:26",
-    "exp": "Ela desobedeceu à ordem de não olhar para trás durante a destruição de Sodoma e Gomorra."
+    "exp": "Ela desobedeceu à ordem de não olhar para trás durante a destruição de Sodoma e Gomorra.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Qual general sírio foi curado da lepra ao se banhar sete vezes no rio Jordão, por conselho do profeta Eliseu?",
     "opts": [
-      "Naamã",
       "Hazael",
       "Balaque",
-      "Nabucodonosor"
+      "Nabucodonosor",
+      "Naamã"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "2 Reis 5",
-    "exp": "Naamã inicialmente resistiu, mas obedeceu e foi curado, reconhecendo o Deus de Israel."
+    "exp": "Naamã inicialmente resistiu, mas obedeceu e foi curado, reconhecendo o Deus de Israel.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "personagens",
     "q": "Qual juíza e profetisa liderou Israel e uma vitória contra o general Sísera?",
     "opts": [
-      "Rute",
+      "Miriã",
       "Débora",
       "Ester",
-      "Miriã"
+      "Rute"
     ],
     "correct": 1,
     "ref": "Juízes 4-5",
-    "exp": "Débora julgava Israel e, ao lado de Baraque, liderou a vitória sobre as forças de Sísera."
+    "exp": "Débora julgava Israel e, ao lado de Baraque, liderou a vitória sobre as forças de Sísera.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "personagens",
     "q": "Quem teve força sobrenatural ligada aos seus cabelos e foi traído por Dalila?",
     "opts": [
       "Sansão",
+      "Otniel",
       "Gideão",
-      "Jefté",
-      "Otniel"
+      "Jefté"
     ],
     "correct": 0,
     "ref": "Juízes 16",
-    "exp": "Sansão perdeu sua força ao ter os cabelos cortados, mas Deus ainda o usou em sua última vitória."
+    "exp": "Sansão perdeu sua força ao ter os cabelos cortados, mas Deus ainda o usou em sua última vitória.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Qual profeta foi levado ao céu num redemoinho, em um carro de fogo, sem experimentar a morte?",
     "opts": [
-      "Eliseu",
-      "Elias",
+      "Isaías",
       "Enoque",
-      "Isaías"
+      "Eliseu",
+      "Elias"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "2 Reis 2:11",
-    "exp": "Elias foi arrebatado diante de Eliseu, seu sucessor no ministério profético."
+    "exp": "Elias foi arrebatado diante de Eliseu, seu sucessor no ministério profético.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Quem pediu porção dobrada do espírito de Elias e recebeu seu manto ao vê-lo subir ao céu?",
     "opts": [
-      "Eliseu",
-      "Geazi",
       "Jonas",
-      "Amós"
+      "Eliseu",
+      "Amós",
+      "Geazi"
     ],
-    "correct": 0,
+    "correct": 1,
     "ref": "2 Reis 2:9-14",
-    "exp": "Eliseu deu continuidade ao ministério profético de Elias em Israel."
+    "exp": "Eliseu deu continuidade ao ministério profético de Elias em Israel.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Qual homem íntegro perdeu bens, filhos e saúde, mas nunca amaldiçoou a Deus, permanecendo fiel na provação?",
     "opts": [
-      "Jó",
+      "Daniel",
       "Davi",
       "Neemias",
-      "Daniel"
+      "Jó"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Livro de Jó",
-    "exp": "Jó é um exemplo de fé em meio ao sofrimento inexplicável, confiando na soberania de Deus."
+    "exp": "Jó é um exemplo de fé em meio ao sofrimento inexplicável, confiando na soberania de Deus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Qual profeta pagão, contratado para amaldiçoar Israel, só conseguiu abençoá-lo — e cuja jumenta falou com ele no caminho?",
     "opts": [
-      "Balaão",
       "Balaque",
-      "Acabe",
-      "Amós"
+      "Amós",
+      "Balaão",
+      "Acabe"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "Números 22-24",
-    "exp": "Deus impediu Balaão de amaldiçoar o povo de Israel, transformando a maldição pretendida em bênção."
+    "exp": "Deus impediu Balaão de amaldiçoar o povo de Israel, transformando a maldição pretendida em bênção.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "personagens",
     "q": "Qual levita, chamado pelos apóstolos de 'filho da consolação', vendeu um campo e entregou o dinheiro à igreja?",
     "opts": [
-      "Barnabé",
       "Timóteo",
+      "Apolo",
       "Silas",
-      "Apolo"
+      "Barnabé"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Atos 4:36-37",
-    "exp": "Barnabé também acompanhou Paulo em viagens missionárias e defendeu João Marcos."
+    "exp": "Barnabé também acompanhou Paulo em viagens missionárias e defendeu João Marcos.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "personagens",
     "q": "Qual fariseu foi visitar Jesus à noite e ouviu o ensino sobre o novo nascimento?",
     "opts": [
-      "Nicodemos",
       "Gamaliel",
       "Caifás",
+      "Nicodemos",
       "Anás"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "João 3:1-21",
-    "exp": "Nicodemos depois ajudou a sepultar Jesus, levando mirra e aloés (João 19:39)."
+    "exp": "Nicodemos depois ajudou a sepultar Jesus, levando mirra e aloés (João 19:39).",
+    "dificuldade": "facil"
   },
   {
     "cat": "personagens",
     "q": "Qual mulher, liberta de sete demônios por Jesus, foi a primeira a testemunhar sua ressurreição?",
     "opts": [
+      "Salomé",
       "Marta",
-      "Maria Madalena",
       "Joana",
-      "Salomé"
+      "Maria Madalena"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "João 20:11-18",
-    "exp": "Maria Madalena anunciou aos discípulos: 'Vi o Senhor!'"
+    "exp": "Maria Madalena anunciou aos discípulos: 'Vi o Senhor!'",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Quanto tempo, aproximadamente, durou o ministério público de Jesus na terra?",
     "opts": [
-      "1 ano",
       "3 anos",
-      "10 anos",
-      "33 anos"
+      "1 ano",
+      "33 anos",
+      "10 anos"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Cronologia dos Evangelhos",
-    "exp": "A tradição, baseada nas festas mencionadas no evangelho de João, situa o ministério público de Jesus em cerca de 3 anos."
+    "exp": "A tradição, baseada nas festas mencionadas no evangelho de João, situa o ministério público de Jesus em cerca de 3 anos.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
@@ -954,259 +1027,279 @@ module.exports = [
     "opts": [
       "No templo de Jerusalém",
       "No deserto",
-      "No monte das Oliveiras",
-      "Na Galileia"
+      "Na Galileia",
+      "No monte das Oliveiras"
     ],
     "correct": 1,
     "ref": "Mateus 4:1-11",
-    "exp": "Jesus resistiu às três tentações citando as Escrituras."
+    "exp": "Jesus resistiu às três tentações citando as Escrituras.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Quais foram os primeiros discípulos que Jesus chamou, à beira do mar da Galileia?",
     "opts": [
-      "Cobradores de impostos",
       "Pescadores",
       "Fariseus",
-      "Soldados romanos"
+      "Soldados romanos",
+      "Cobradores de impostos"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Mateus 4:18-22",
-    "exp": "Pedro, André, Tiago e João deixaram suas redes para segui-lo."
+    "exp": "Pedro, André, Tiago e João deixaram suas redes para segui-lo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Em qual ensino Jesus proclamou as Bem-aventuranças ('Bem-aventurados os pobres de espírito...')?",
     "opts": [
-      "Parábola do semeador",
-      "Sermão do Monte",
       "Discurso do Monte das Oliveiras",
-      "Última ceia"
+      "Última ceia",
+      "Parábola do semeador",
+      "Sermão do Monte"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Mateus 5-7",
-    "exp": "O Sermão do Monte reúne ensinos centrais de Jesus sobre o Reino de Deus."
+    "exp": "O Sermão do Monte reúne ensinos centrais de Jesus sobre o Reino de Deus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Quem apareceu ao lado de Jesus na Transfiguração, conversando sobre sua partida?",
     "opts": [
-      "Abraão e Davi",
-      "Moisés e Elias",
       "João Batista e Isaías",
-      "Adão e Noé"
+      "Adão e Noé",
+      "Abraão e Davi",
+      "Moisés e Elias"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Mateus 17:1-3",
-    "exp": "A cena confirmou diante de Pedro, Tiago e João que Jesus cumpria a Lei (Moisés) e os Profetas (Elias)."
+    "exp": "A cena confirmou diante de Pedro, Tiago e João que Jesus cumpria a Lei (Moisés) e os Profetas (Elias).",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "ministerio",
     "q": "Com quantos pães e peixes Jesus alimentou cerca de 5 mil homens?",
     "opts": [
       "2 pães e 5 peixes",
-      "5 pães e 2 peixes",
       "7 pães e 3 peixes",
+      "5 pães e 2 peixes",
       "10 pães e 1 peixe"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "João 6:1-13",
-    "exp": "Um menino ofereceu o pouco que tinha, e Jesus multiplicou para alimentar a multidão."
+    "exp": "Um menino ofereceu o pouco que tinha, e Jesus multiplicou para alimentar a multidão.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Em qual cidade Jesus ressuscitou Lázaro, que já estava morto havia 4 dias?",
     "opts": [
-      "Betânia",
-      "Belém",
       "Cafarnaum",
-      "Jericó"
+      "Belém",
+      "Jericó",
+      "Betânia"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "João 11:1-44",
-    "exp": "Esse foi um dos maiores sinais de Jesus, mostrando seu poder sobre a morte."
+    "exp": "Esse foi um dos maiores sinais de Jesus, mostrando seu poder sobre a morte.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "ministerio",
     "q": "Como ficou conhecida a entrada de Jesus em Jerusalém, montado num jumentinho, aclamado pela multidão?",
     "opts": [
-      "Ascensão",
       "Transfiguração",
       "Entrada triunfal",
-      "Pentecostes"
+      "Pentecostes",
+      "Ascensão"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Mateus 21:1-11",
-    "exp": "O povo estendeu mantos e ramos no caminho, cumprindo a profecia de Zacarias 9:9."
+    "exp": "O povo estendeu mantos e ramos no caminho, cumprindo a profecia de Zacarias 9:9.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "O que Jesus instituiu na última ceia com os discípulos, na noite em que foi traído?",
     "opts": [
-      "A Ceia do Senhor (pão e vinho)",
-      "O batismo",
+      "A festa dos tabernáculos",
       "O jejum de 40 dias",
-      "A festa dos tabernáculos"
+      "A Ceia do Senhor (pão e vinho)",
+      "O batismo"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "Mateus 26:26-28",
-    "exp": "Jesus deu novo significado ao pão e ao vinho, apontando para seu corpo e sangue entregues por nós."
+    "exp": "Jesus deu novo significado ao pão e ao vinho, apontando para seu corpo e sangue entregues por nós.",
+    "dificuldade": "facil"
   },
   {
     "cat": "ministerio",
     "q": "Quantos dias Jesus permaneceu na terra após a ressurreição, antes de subir aos céus?",
     "opts": [
       "3 dias",
-      "7 dias",
       "40 dias",
+      "7 dias",
       "50 dias"
     ],
-    "correct": 2,
+    "correct": 1,
     "ref": "Atos 1:3",
-    "exp": "Durante esse período, Jesus apareceu a diversos discípulos, provando estar vivo."
+    "exp": "Durante esse período, Jesus apareceu a diversos discípulos, provando estar vivo.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "sangue",
     "q": "Segundo Levítico 17:11, o que há no sangue que faz expiação pela alma?",
     "opts": [
-      "A vida da carne",
       "A força do animal",
-      "O perfume do sacrifício",
-      "A cor vermelha"
+      "A vida da carne",
+      "A cor vermelha",
+      "O perfume do sacrifício"
     ],
-    "correct": 0,
+    "correct": 1,
     "ref": "Levítico 17:11",
-    "exp": "O Antigo Testamento já ensinava que a vida está no sangue, base para o sistema sacrificial que apontava para Cristo."
+    "exp": "O Antigo Testamento já ensinava que a vida está no sangue, base para o sistema sacrificial que apontava para Cristo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "sangue",
-    "q": "Segundo Hebreus 9:22, sem derramamento de sangue não há o quê?",
+    "q": "Segundo Êxodo 12:13, o que aconteceria às casas marcadas com o sangue do cordeiro na Páscoa?",
     "opts": [
-      "Aliança",
-      "Remissão (perdão) de pecados",
-      "Templo",
-      "Sacerdócio"
+      "A praga da morte não as atingiria",
+      "Seriam abençoadas com riquezas",
+      "Seriam protegidas de doenças para sempre",
+      "Se tornariam templos"
     ],
-    "correct": 1,
-    "ref": "Hebreus 9:22",
-    "exp": "O sacrifício de Cristo cumpriu definitivamente o que os sacrifícios antigos apenas prefiguravam."
+    "correct": 0,
+    "ref": "Êxodo 12:13",
+    "exp": "O sangue nos batentes das portas era o sinal que livrava os primogênitos da praga da morte, prefigurando a proteção pelo sangue de Cristo.",
+    "dificuldade": "facil"
   },
   {
     "cat": "sangue",
     "q": "Segundo 1 Pedro 1:18-19, fomos resgatados não com coisas corruptíveis, mas com o precioso sangue de quem?",
     "opts": [
-      "Cristo, como cordeiro sem defeito",
       "Um profeta",
       "Um anjo",
+      "Cristo, como cordeiro sem defeito",
       "Um sacerdote levita"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "1 Pedro 1:18-19",
-    "exp": "O resgate não veio de prata ou ouro, mas do sangue precioso de Cristo."
+    "exp": "O resgate não veio de prata ou ouro, mas do sangue precioso de Cristo.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "sangue",
     "q": "Segundo Efésios 1:7, em Cristo temos a redenção por meio do seu sangue, ou seja, o quê?",
     "opts": [
-      "Riquezas materiais",
-      "O perdão dos pecados",
       "Longevidade",
-      "Proteção física garantida"
+      "Riquezas materiais",
+      "Proteção física garantida",
+      "O perdão dos pecados"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Efésios 1:7",
-    "exp": "A redenção e o perdão dos pecados vêm segundo as riquezas da graça de Deus."
+    "exp": "A redenção e o perdão dos pecados vêm segundo as riquezas da graça de Deus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "sangue",
     "q": "Segundo Apocalipse 1:5, o que Jesus fez por nós, por seu amor, com o seu próprio sangue?",
     "opts": [
+      "Nos afastou da igreja",
       "Nos livrou (lavou) dos nossos pecados",
-      "Nos deu poder político",
       "Nos tornou invisíveis ao mal",
-      "Nos afastou da igreja"
+      "Nos deu poder político"
     ],
-    "correct": 0,
+    "correct": 1,
     "ref": "Apocalipse 1:5",
-    "exp": "Jesus é descrito como aquele que nos ama e nos libertou dos pecados por meio de seu sangue."
+    "exp": "Jesus é descrito como aquele que nos ama e nos libertou dos pecados por meio de seu sangue.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "sangue",
     "q": "Segundo Apocalipse 12:11, os irmãos venceram o acusador por causa do sangue do Cordeiro e por causa de quê mais?",
     "opts": [
-      "Da palavra do testemunho deles",
       "De suas riquezas",
-      "De sua genealogia",
-      "De seus jejuns"
+      "Da palavra do testemunho deles",
+      "De seus jejuns",
+      "De sua genealogia"
     ],
-    "correct": 0,
+    "correct": 1,
     "ref": "Apocalipse 12:11",
-    "exp": "A vitória sobre o acusador combina a obra de Cristo com o testemunho fiel dos crentes."
+    "exp": "A vitória sobre o acusador combina a obra de Cristo com o testemunho fiel dos crentes.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "sangue",
     "q": "Segundo Romanos 5:9, sendo já justificados pelo sangue de Cristo, seremos salvos por meio dele de quê?",
     "opts": [
-      "Da ira (de Deus)",
-      "Da pobreza",
       "Das perseguições",
-      "Da velhice"
+      "Da pobreza",
+      "Da velhice",
+      "Da ira (de Deus)"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Romanos 5:9",
-    "exp": "A justificação presente garante a salvação futura da ira vindoura."
+    "exp": "A justificação presente garante a salvação futura da ira vindoura.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "sangue",
     "q": "Segundo Colossenses 1:20, Deus reconciliou consigo todas as coisas, tendo feito a paz por meio do sangue de quê?",
     "opts": [
-      "Da cruz de Cristo",
       "Dos profetas",
+      "Dos mártires",
       "Dos sacerdotes do templo",
-      "Dos mártires"
+      "Da cruz de Cristo"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Colossenses 1:20",
-    "exp": "A cruz é o centro da reconciliação entre Deus e toda a criação."
+    "exp": "A cruz é o centro da reconciliação entre Deus e toda a criação.",
+    "dificuldade": "facil"
   },
   {
     "cat": "sangue",
     "q": "Segundo 1 João 1:7, o sangue de Jesus, o Filho de Deus, faz o quê por quem anda na luz?",
     "opts": [
-      "Nos purifica de todo pecado",
-      "Nos torna ricos",
+      "Nos dá poder profético",
       "Nos protege de doenças",
-      "Nos dá poder profético"
+      "Nos purifica de todo pecado",
+      "Nos torna ricos"
     ],
-    "correct": 0,
+    "correct": 2,
     "ref": "1 João 1:7",
-    "exp": "A purificação contínua pelo sangue de Cristo acompanha a comunhão na luz."
+    "exp": "A purificação contínua pelo sangue de Cristo acompanha a comunhão na luz.",
+    "dificuldade": "facil"
   },
   {
     "cat": "sangue",
     "q": "Segundo Mateus 26:28, o que Jesus disse que seu sangue representava, a ser derramado por muitos?",
     "opts": [
-      "O sangue da (nova) aliança, para remissão dos pecados",
-      "Um símbolo de tristeza",
+      "Uma promessa de riqueza",
       "Um sinal de fraqueza",
-      "Uma promessa de riqueza"
+      "Um símbolo de tristeza",
+      "O sangue da (nova) aliança, para remissão dos pecados"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Mateus 26:28",
-    "exp": "Na última ceia, Jesus liga seu sangue diretamente ao perdão dos pecados e à nova aliança."
+    "exp": "Na última ceia, Jesus liga seu sangue diretamente ao perdão dos pecados e à nova aliança.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
     "q": "Quantos livros tem a Bíblia ao todo, somando Antigo e Novo Testamento?",
     "opts": [
-      "39",
       "66",
+      "39",
       "73",
       "27"
     ],
-    "correct": 1,
+    "correct": 0,
     "ref": "Cânon bíblico protestante",
-    "exp": "São 39 livros no Antigo Testamento e 27 no Novo Testamento, totalizando 66."
+    "exp": "São 39 livros no Antigo Testamento e 27 no Novo Testamento, totalizando 66.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
@@ -1219,98 +1312,106 @@ module.exports = [
     ],
     "correct": 1,
     "ref": "Cânon do Antigo Testamento",
-    "exp": "O Antigo Testamento reúne 39 livros, do Gênesis a Malaquias."
+    "exp": "O Antigo Testamento reúne 39 livros, do Gênesis a Malaquias.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
     "q": "Como se chama o grupo dos 5 primeiros livros da Bíblia, tradicionalmente atribuídos a Moisés?",
     "opts": [
-      "Pentateuco",
       "Históricos",
+      "Sinóticos",
       "Poéticos",
-      "Sinóticos"
+      "Pentateuco"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Gênesis a Deuteronômio",
-    "exp": "Pentateuco significa 'cinco rolos/livros': Gênesis, Êxodo, Levítico, Números e Deuteronômio."
+    "exp": "Pentateuco significa 'cinco rolos/livros': Gênesis, Êxodo, Levítico, Números e Deuteronômio.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
     "q": "Quantos livros históricos há no Antigo Testamento (de Josué a Ester)?",
     "opts": [
       "5",
-      "12",
+      "9",
       "17",
-      "9"
+      "12"
     ],
-    "correct": 1,
+    "correct": 3,
     "ref": "Josué a Ester",
-    "exp": "São 12 livros históricos, narrando a entrada em Canaã até o retorno do exílio."
+    "exp": "São 12 livros históricos, narrando a entrada em Canaã até o retorno do exílio.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "panorama",
     "q": "Quais destes é um dos 5 livros poéticos do Antigo Testamento?",
     "opts": [
-      "Salmos",
       "Josué",
       "Daniel",
-      "Mateus"
+      "Mateus",
+      "Salmos"
     ],
-    "correct": 0,
+    "correct": 3,
     "ref": "Jó, Salmos, Provérbios, Eclesiastes e Cantares",
-    "exp": "Os livros poéticos exploram sabedoria, louvor e reflexão sobre a vida diante de Deus."
+    "exp": "Os livros poéticos exploram sabedoria, louvor e reflexão sobre a vida diante de Deus.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
     "q": "Quantos 'profetas maiores' existem no Antigo Testamento?",
     "opts": [
+      "7",
       "3",
       "5",
-      "12",
-      "7"
+      "12"
     ],
-    "correct": 1,
+    "correct": 2,
     "ref": "Isaías, Jeremias, Lamentações, Ezequiel e Daniel",
-    "exp": "São chamados 'maiores' pela extensão de seus escritos, não por maior importância."
+    "exp": "São chamados 'maiores' pela extensão de seus escritos, não por maior importância.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "panorama",
     "q": "Quantos 'profetas menores' existem no Antigo Testamento?",
     "opts": [
       "12",
-      "5",
       "20",
-      "8"
+      "8",
+      "5"
     ],
     "correct": 0,
     "ref": "Oséias a Malaquias",
-    "exp": "São 12 livros proféticos mais curtos, de Oséias a Malaquias."
+    "exp": "São 12 livros proféticos mais curtos, de Oséias a Malaquias.",
+    "dificuldade": "intermediaria"
   },
   {
     "cat": "panorama",
     "q": "Em quais idiomas a Bíblia foi originalmente escrita?",
     "opts": [
-      "Latim, grego e inglês",
-      "Hebraico, aramaico e grego",
       "Apenas hebraico",
-      "Português antigo e grego"
+      "Hebraico, aramaico e grego",
+      "Português antigo e grego",
+      "Latim, grego e inglês"
     ],
     "correct": 1,
     "ref": "Composição original das Escrituras",
-    "exp": "O Antigo Testamento foi escrito majoritariamente em hebraico (partes em aramaico), e o Novo Testamento em grego."
+    "exp": "O Antigo Testamento foi escrito majoritariamente em hebraico (partes em aramaico), e o Novo Testamento em grego.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
     "q": "Quantos evangelhos há no Novo Testamento?",
     "opts": [
-      "3",
-      "4",
       "5",
-      "2"
+      "4",
+      "2",
+      "3"
     ],
     "correct": 1,
     "ref": "Mateus, Marcos, Lucas e João",
-    "exp": "Os quatro evangelhos narram a vida, morte e ressurreição de Jesus sob perspectivas complementares."
+    "exp": "Os quatro evangelhos narram a vida, morte e ressurreição de Jesus sob perspectivas complementares.",
+    "dificuldade": "facil"
   },
   {
     "cat": "panorama",
@@ -1323,6 +1424,7 @@ module.exports = [
     ],
     "correct": 1,
     "ref": "História da composição bíblica",
-    "exp": "Reis, profetas, pastores, médicos e pescadores escreveram ao longo de séculos uma mensagem unificada."
+    "exp": "Reis, profetas, pastores, médicos e pescadores escreveram ao longo de séculos uma mensagem unificada.",
+    "dificuldade": "intermediaria"
   }
 ];

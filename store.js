@@ -159,4 +159,5 @@ module.exports = {
   updateDayMeta,
   recordQuestionAnswer,
   isDayClosed,
+  DATA_DIR,
 };

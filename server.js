@@ -1,4 +1,6 @@
 require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const twilio = require('twilio');
 const cron = require('node-cron');
@@ -17,6 +19,9 @@ const GROUP_NAME = process.env.GROUP_NAME || 'Quiz Cristão';
 let client = null;
 if (process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN) {
   client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+  console.log('Twilio configurado: SIM (Account SID e Auth Token presentes).');
+} else {
+  console.log('Twilio configurado: NAO — TWILIO_ACCOUNT_SID/TWILIO_AUTH_TOKEN ausentes. Mensagens proativas (alerta das 8h, resumo das 20h) NAO serao enviadas de verdade.');
 }
 
 async function sendWhatsApp(to, body) {
@@ -207,7 +212,13 @@ function handleContinue(user, bodyLower) {
 async function sendDailyAlerts() {
   const users = store.getAllActiveUsers();
   const todayKey = quiz.dayKey(new Date());
-  console.log(`Enviando alerta diario para ${users.length} usuario(s)...`);
+  console.log(`[CRON 8h] Disparado as ${new Date().toString()}. Twilio configurado: ${!!client}. Inscritos ativos: ${users.length}.`);
+  if (!client) {
+    console.log('[CRON 8h] AVISO: Twilio nao configurado — nenhuma mensagem real sera enviada (apenas log).');
+  }
+  if (users.length === 0) {
+    console.log('[CRON 8h] AVISO: nenhum inscrito ativo encontrado. Verifique /admin/debug para checar se os dados persistiram.');
+  }
 
   for (const user of users) {
     if (user.lastDailyAlertKey === todayKey) continue; // ja avisado hoje
@@ -398,6 +409,51 @@ function buildStatsHTML() {
 </body>
 </html>`;
 }
+
+// ---------- Diagnostico (protegido por token) ----------
+// Ajuda a descobrir por que um alerta proativo (8h/20h) pode nao ter chegado,
+// sem precisar vasculhar o dashboard do Render manualmente.
+app.get('/admin/debug', (req, res) => {
+  const token = process.env.ADMIN_TOKEN;
+  if (token && req.query.token !== token) {
+    return res.status(401).json({ erro: 'Acesso negado. Adicione ?token=SEU_TOKEN na URL.' });
+  }
+
+  let discoGravavel = true;
+  let erroDisco = null;
+  try {
+    const testPath = path.join(store.DATA_DIR, '.write-test');
+    fs.writeFileSync(testPath, String(Date.now()));
+    fs.unlinkSync(testPath);
+  } catch (e) {
+    discoGravavel = false;
+    erroDisco = e.message;
+  }
+
+  const activeUsers = store.getAllActiveUsers();
+  const todayKey = quiz.dayKey(new Date());
+
+  res.json({
+    horarioAgoraNoServidor: new Date().toString(),
+    timezoneConfigurada: process.env.TIMEZONE || 'America/Sao_Paulo (padrao)',
+    dailyCron: process.env.DAILY_CRON || '0 8 * * * (padrao)',
+    closeCron: process.env.CLOSE_CRON || '0 20 * * * (padrao)',
+    twilioConfigurado: !!client,
+    numeroWhatsappConfigurado: process.env.TWILIO_WHATSAPP_NUMBER || '(nao definido)',
+    pastaDeDados: store.DATA_DIR,
+    discoGravavel,
+    erroDisco,
+    totalInscritosAtivos: activeUsers.length,
+    inscritos: activeUsers.map(u => ({
+      telefone: maskPhone(u.phone),
+      inscritoEm: u.subscribedAt,
+      ultimoAlertaRecebidoNoDia: u.lastDailyAlertKey,
+      diasJogados: (u.daysPlayed || []).length,
+    })),
+    diaDeHoje: todayKey,
+    statsDeHoje: store.getDayMeta(todayKey),
+  });
+});
 
 app.get('/admin/stats', (req, res) => {
   const token = process.env.ADMIN_TOKEN;
