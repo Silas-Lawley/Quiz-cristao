@@ -3,21 +3,21 @@ const BANK = require('./questions');
 const PER_DAY = 3;
 const EPOCH = new Date(2026, 0, 1); // mesma referencia usada no quiz web, mantem os dois sincronizados
 
-// Cada dia deve ter 2 perguntas faceis + 1 intermediaria. Separamos o banco em
-// duas "piscinas" por dificuldade e montamos os blocos diarios cruzando as duas,
+// Cada dia deve ter 1 pergunta facil + 2 moderadas. Separamos o banco em duas
+// "piscinas" por dificuldade e montamos os blocos diarios cruzando as duas,
 // em vez de simplesmente fatiar o array original em grupos de 3.
 const FACIL_POOL = BANK.filter(q => q.dificuldade === 'facil');
-const INTERMEDIARIA_POOL = BANK.filter(q => q.dificuldade === 'intermediaria');
+const MODERADA_POOL = BANK.filter(q => q.dificuldade === 'moderada');
 
-// numero de dias possiveis = quantos blocos completos de (2 faceis + 1 intermediaria)
+// numero de dias possiveis = quantos blocos completos de (1 facil + 2 moderadas)
 // da para montar sem repetir pergunta
-const TOTAL_BLOCKS = Math.min(Math.floor(FACIL_POOL.length / 2), INTERMEDIARIA_POOL.length);
+const TOTAL_BLOCKS = Math.min(FACIL_POOL.length, Math.floor(MODERADA_POOL.length / 2));
 
 function buildDayBlock(blockIndex) {
-  const facil1 = FACIL_POOL[(blockIndex * 2) % FACIL_POOL.length];
-  const facil2 = FACIL_POOL[(blockIndex * 2 + 1) % FACIL_POOL.length];
-  const intermediaria = INTERMEDIARIA_POOL[blockIndex % INTERMEDIARIA_POOL.length];
-  return [facil1, facil2, intermediaria];
+  const facil = FACIL_POOL[blockIndex % FACIL_POOL.length];
+  const moderada1 = MODERADA_POOL[(blockIndex * 2) % MODERADA_POOL.length];
+  const moderada2 = MODERADA_POOL[(blockIndex * 2 + 1) % MODERADA_POOL.length];
+  return [facil, moderada1, moderada2];
 }
 
 const CATEGORY_LABELS = {
@@ -61,7 +61,10 @@ function formatQuestion(item, index, total) {
 
 function formatFeedback(item, isCorrect) {
   const head = isCorrect ? '✅ Certo!' : '❌ Nao foi dessa vez.';
-  return `${head}\n\n📖 *${item.ref}*\n${item.exp}`;
+  const correctLetter = item.correct + 1;
+  const correctText = item.opts[item.correct];
+  const correctLine = `✔️ Alternativa correta: *${correctLetter}) ${correctText}*`;
+  return `${head}\n${correctLine}\n\n📖 *${item.ref}*\n${item.exp}`;
 }
 
 function formatSummary(user, correctToday, totalToday) {

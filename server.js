@@ -186,6 +186,7 @@ function handleAnswer(user, bodyRaw) {
     totalAnswered: user.totalAnswered + questions.length,
     streak: newStreak,
     lastPlayedKey: todayKey,
+    lastCompletedAt: new Date().toISOString(),
   });
 
   const summary = quiz.formatSummary(updated, newCorrectToday, questions.length);
@@ -320,21 +321,64 @@ async function checkRejoinReminders() {
   if (sentCount > 0) console.log(`[Lembrete rejoin] Enviado para ${sentCount} usuario(s).`);
 }
 
+// ---------- Aviso de saudade (36h sem concluir o quiz) ----------
+const INACTIVITY_THRESHOLD_HOURS = 36;
+const INACTIVITY_REMINDER_COOLDOWN_HOURS = 48; // nao manda de novo antes disso, pra nao ficar repetitivo
+
+async function checkInactivityReminders() {
+  const users = store.getAllActiveUsers();
+  const now = Date.now();
+  let sentCount = 0;
+
+  for (const user of users) {
+    const baseline = user.lastCompletedAt || user.subscribedAt;
+    if (!baseline) continue;
+    const hoursSince = (now - new Date(baseline).getTime()) / 3600000;
+
+    const lastReminder = user.lastInactivityReminderSentAt;
+    const hoursSinceReminder = lastReminder ? (now - new Date(lastReminder).getTime()) / 3600000 : Infinity;
+
+    if (hoursSince >= INACTIVITY_THRESHOLD_HOURS && hoursSinceReminder >= INACTIVITY_REMINDER_COOLDOWN_HOURS) {
+      try {
+        await sendWhatsApp(
+          user.phone,
+          `🙏 Sentimos a sua falta no *${GROUP_NAME}*!\n\n` +
+          `Faz um tempinho que você não aparece por aqui. Temos perguntas novas todos os dias — que tal voltar hoje?\n\n` +
+          `Responda *INICIAR* quando quiser continuar aprendendo mais da Palavra. 📖`
+        );
+        store.updateUser(user.phone, { lastInactivityReminderSentAt: new Date().toISOString() });
+        sentCount++;
+      } catch (err) {
+        console.error(`Falha ao enviar aviso de saudade para ${user.phone}:`, err.message);
+      }
+    }
+  }
+
+  if (sentCount > 0) console.log(`[Aviso de saudade] Enviado para ${sentCount} usuario(s).`);
+}
+
 const cronExpr = process.env.DAILY_CRON || '0 8 * * *';
 const closeCronExpr = process.env.CLOSE_CRON || '0 20 * * *';
 const timezone = process.env.TIMEZONE || 'America/Sao_Paulo';
 cron.schedule(cronExpr, async () => {
   await sendDailyAlerts();
   await checkRejoinReminders();
+  await checkInactivityReminders();
 }, { timezone });
 cron.schedule(closeCronExpr, async () => {
   await closeDayAndBroadcast();
   await checkRejoinReminders();
+  await checkInactivityReminders();
 }, { timezone });
 
-// ---------- Rota de teste manual do lembrete de rejoin ----------
+// ---------- Rotas de teste manual dos lembretes ----------
 app.post('/admin/check-rejoin-reminders', async (req, res) => {
   await checkRejoinReminders();
+  res.json({ ok: true });
+});
+
+app.post('/admin/check-inactivity-reminders', async (req, res) => {
+  await checkInactivityReminders();
   res.json({ ok: true });
 });
 

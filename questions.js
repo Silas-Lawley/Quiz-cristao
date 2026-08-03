@@ -25,7 +25,7 @@ module.exports = [
     "correct": 0,
     "ref": "Gênesis 7:12",
     "exp": "A chuva caiu sobre a terra durante 40 dias e 40 noites.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -53,7 +53,7 @@ module.exports = [
     "correct": 1,
     "ref": "Gênesis 37",
     "exp": "José foi vendido por seus irmãos, mas Deus usou isso para o bem, anos depois.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -95,7 +95,7 @@ module.exports = [
     "correct": 0,
     "ref": "Josué 6",
     "exp": "Após marcharem ao redor da cidade por 7 dias, os muros caíram pela fé e obediência.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -123,7 +123,7 @@ module.exports = [
     "correct": 3,
     "ref": "1 Reis 3–4",
     "exp": "Salomão pediu sabedoria a Deus e recebeu também riquezas e honra.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -179,7 +179,7 @@ module.exports = [
     "correct": 0,
     "ref": "João 2:1-11",
     "exp": "Nas bodas de Caná, Jesus transformou água em vinho, manifestando sua glória.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -221,7 +221,7 @@ module.exports = [
     "correct": 1,
     "ref": "João 19:17-18",
     "exp": "Gólgota significa 'lugar da caveira', onde Jesus foi crucificado fora da cidade.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -249,7 +249,7 @@ module.exports = [
     "correct": 1,
     "ref": "Atos 9:1-22",
     "exp": "Saulo foi transformado no caminho de Damasco e passou a pregar o evangelho que antes perseguia.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -263,7 +263,7 @@ module.exports = [
     "correct": 2,
     "ref": "Livro de Apocalipse",
     "exp": "Apocalipse revela o triunfo final de Cristo e a nova criação.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -277,7 +277,7 @@ module.exports = [
     "correct": 3,
     "ref": "Cartas paulinas",
     "exp": "Paulo escreveu treze cartas, incluindo Romanos, Coríntios, Gálatas e Efésios.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -305,7 +305,7 @@ module.exports = [
     "correct": 1,
     "ref": "Gênesis 41",
     "exp": "José interpretou os sonhos sobre os sete anos de fartura e sete de fome.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -333,7 +333,7 @@ module.exports = [
     "correct": 3,
     "ref": "Cânon do Novo Testamento",
     "exp": "O Novo Testamento reúne 27 livros, dos Evangelhos ao Apocalipse.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -361,7 +361,7 @@ module.exports = [
     "correct": 3,
     "ref": "Gênesis 22:2",
     "exp": "Deus proveu um cordeiro no lugar de Isaque, prefigurando o sacrifício de Cristo.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -375,7 +375,7 @@ module.exports = [
     "correct": 1,
     "ref": "João 13:23; 21:20",
     "exp": "João se refere a si mesmo dessa forma em seu evangelho.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -389,7 +389,7 @@ module.exports = [
     "correct": 1,
     "ref": "Números 14:33-34",
     "exp": "Por causa da desobediência, uma geração vagou 40 anos no deserto.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "geral",
@@ -417,7 +417,7 @@ module.exports = [
     "correct": 2,
     "ref": "Daniel 2",
     "exp": "Daniel interpretou o sonho como representando os reinos que se sucederiam na história.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -445,7 +445,7 @@ module.exports = [
     "correct": 3,
     "ref": "Efésios 2:9",
     "exp": "A salvação é dom de Deus justamente para que nenhum ser humano possa se orgulhar de merecê-la.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -515,7 +515,7 @@ module.exports = [
     "correct": 0,
     "ref": "Romanos 6:23",
     "exp": "Ao contrário do salário do pecado, a vida eterna é dada gratuitamente em Cristo.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -543,7 +543,7 @@ module.exports = [
     "correct": 3,
     "ref": "Romanos 10:9",
     "exp": "A salvação é pela confissão de fé em Cristo e na sua ressurreição.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -557,7 +557,7 @@ module.exports = [
     "correct": 0,
     "ref": "João 14:26",
     "exp": "O Espírito Santo ensina e faz lembrar tudo o que Jesus disse aos seus discípulos.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -571,7 +571,7 @@ module.exports = [
     "correct": 3,
     "ref": "Mateus 27:51",
     "exp": "O véu rasgado simboliza que, por Cristo, todos podem se aproximar de Deus sem mediador humano.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -613,7 +613,7 @@ module.exports = [
     "correct": 1,
     "ref": "Tito 3:5",
     "exp": "A salvação nasce da misericórdia de Deus, não do mérito humano.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -669,7 +669,7 @@ module.exports = [
     "correct": 0,
     "ref": "Atos 1:8",
     "exp": "O Espírito Santo capacita a igreja para testemunhar de Cristo a todas as nações.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -711,7 +711,7 @@ module.exports = [
     "correct": 2,
     "ref": "Hebreus 9:22",
     "exp": "O sacrifício de Cristo cumpriu definitivamente o que os sacrifícios do Antigo Testamento apontavam.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -725,7 +725,7 @@ module.exports = [
     "correct": 3,
     "ref": "Filipenses 2:6-7",
     "exp": "Cristo se humilhou, tornando-se servo e obediente até a morte de cruz.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -753,7 +753,7 @@ module.exports = [
     "correct": 3,
     "ref": "Gálatas 2:20",
     "exp": "Paulo descreve a nova identidade do crente, unido a Cristo.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -767,7 +767,7 @@ module.exports = [
     "correct": 3,
     "ref": "Hebreus 11:1",
     "exp": "A fé bíblica é confiança firme em Deus e em suas promessas, mesmo sem ver.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -809,7 +809,7 @@ module.exports = [
     "correct": 2,
     "ref": "Apocalipse 3:20",
     "exp": "Jesus convida cada pessoa a abrir o coração e ter comunhão com ele.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "evangelho",
@@ -837,7 +837,7 @@ module.exports = [
     "correct": 1,
     "ref": "Romanos 5:8",
     "exp": "Deus demonstra seu amor ao enviar Cristo para morrer por pecadores, antes mesmo do arrependimento.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -851,7 +851,7 @@ module.exports = [
     "correct": 2,
     "ref": "Gênesis 14:18-20",
     "exp": "Melquisedeque é uma figura misteriosa, rei-sacerdote, vista como um tipo (prefiguração) de Cristo em Hebreus 7.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -865,7 +865,7 @@ module.exports = [
     "correct": 2,
     "ref": "Gênesis 19:26",
     "exp": "Ela desobedeceu à ordem de não olhar para trás durante a destruição de Sodoma e Gomorra.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -879,7 +879,7 @@ module.exports = [
     "correct": 3,
     "ref": "2 Reis 5",
     "exp": "Naamã inicialmente resistiu, mas obedeceu e foi curado, reconhecendo o Deus de Israel.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -893,7 +893,7 @@ module.exports = [
     "correct": 1,
     "ref": "Juízes 4-5",
     "exp": "Débora julgava Israel e, ao lado de Baraque, liderou a vitória sobre as forças de Sísera.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -921,7 +921,7 @@ module.exports = [
     "correct": 3,
     "ref": "2 Reis 2:11",
     "exp": "Elias foi arrebatado diante de Eliseu, seu sucessor no ministério profético.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -935,7 +935,7 @@ module.exports = [
     "correct": 1,
     "ref": "2 Reis 2:9-14",
     "exp": "Eliseu deu continuidade ao ministério profético de Elias em Israel.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -949,7 +949,7 @@ module.exports = [
     "correct": 3,
     "ref": "Livro de Jó",
     "exp": "Jó é um exemplo de fé em meio ao sofrimento inexplicável, confiando na soberania de Deus.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -963,7 +963,7 @@ module.exports = [
     "correct": 2,
     "ref": "Números 22-24",
     "exp": "Deus impediu Balaão de amaldiçoar o povo de Israel, transformando a maldição pretendida em bênção.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -977,7 +977,7 @@ module.exports = [
     "correct": 3,
     "ref": "Atos 4:36-37",
     "exp": "Barnabé também acompanhou Paulo em viagens missionárias e defendeu João Marcos.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -991,7 +991,7 @@ module.exports = [
     "correct": 2,
     "ref": "João 3:1-21",
     "exp": "Nicodemos depois ajudou a sepultar Jesus, levando mirra e aloés (João 19:39).",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "personagens",
@@ -1005,7 +1005,7 @@ module.exports = [
     "correct": 3,
     "ref": "João 20:11-18",
     "exp": "Maria Madalena anunciou aos discípulos: 'Vi o Senhor!'",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1019,7 +1019,7 @@ module.exports = [
     "correct": 0,
     "ref": "Cronologia dos Evangelhos",
     "exp": "A tradição, baseada nas festas mencionadas no evangelho de João, situa o ministério público de Jesus em cerca de 3 anos.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1033,7 +1033,7 @@ module.exports = [
     "correct": 1,
     "ref": "Mateus 4:1-11",
     "exp": "Jesus resistiu às três tentações citando as Escrituras.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1047,7 +1047,7 @@ module.exports = [
     "correct": 0,
     "ref": "Mateus 4:18-22",
     "exp": "Pedro, André, Tiago e João deixaram suas redes para segui-lo.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1061,7 +1061,7 @@ module.exports = [
     "correct": 3,
     "ref": "Mateus 5-7",
     "exp": "O Sermão do Monte reúne ensinos centrais de Jesus sobre o Reino de Deus.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1075,7 +1075,7 @@ module.exports = [
     "correct": 3,
     "ref": "Mateus 17:1-3",
     "exp": "A cena confirmou diante de Pedro, Tiago e João que Jesus cumpria a Lei (Moisés) e os Profetas (Elias).",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1103,7 +1103,7 @@ module.exports = [
     "correct": 3,
     "ref": "João 11:1-44",
     "exp": "Esse foi um dos maiores sinais de Jesus, mostrando seu poder sobre a morte.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1117,7 +1117,7 @@ module.exports = [
     "correct": 1,
     "ref": "Mateus 21:1-11",
     "exp": "O povo estendeu mantos e ramos no caminho, cumprindo a profecia de Zacarias 9:9.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1131,7 +1131,7 @@ module.exports = [
     "correct": 2,
     "ref": "Mateus 26:26-28",
     "exp": "Jesus deu novo significado ao pão e ao vinho, apontando para seu corpo e sangue entregues por nós.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "ministerio",
@@ -1145,7 +1145,7 @@ module.exports = [
     "correct": 1,
     "ref": "Atos 1:3",
     "exp": "Durante esse período, Jesus apareceu a diversos discípulos, provando estar vivo.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1159,7 +1159,7 @@ module.exports = [
     "correct": 1,
     "ref": "Levítico 17:11",
     "exp": "O Antigo Testamento já ensinava que a vida está no sangue, base para o sistema sacrificial que apontava para Cristo.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1173,7 +1173,7 @@ module.exports = [
     "correct": 0,
     "ref": "Êxodo 12:13",
     "exp": "O sangue nos batentes das portas era o sinal que livrava os primogênitos da praga da morte, prefigurando a proteção pelo sangue de Cristo.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1187,7 +1187,7 @@ module.exports = [
     "correct": 2,
     "ref": "1 Pedro 1:18-19",
     "exp": "O resgate não veio de prata ou ouro, mas do sangue precioso de Cristo.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1201,7 +1201,7 @@ module.exports = [
     "correct": 3,
     "ref": "Efésios 1:7",
     "exp": "A redenção e o perdão dos pecados vêm segundo as riquezas da graça de Deus.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1215,7 +1215,7 @@ module.exports = [
     "correct": 1,
     "ref": "Apocalipse 1:5",
     "exp": "Jesus é descrito como aquele que nos ama e nos libertou dos pecados por meio de seu sangue.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1229,7 +1229,7 @@ module.exports = [
     "correct": 1,
     "ref": "Apocalipse 12:11",
     "exp": "A vitória sobre o acusador combina a obra de Cristo com o testemunho fiel dos crentes.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1243,7 +1243,7 @@ module.exports = [
     "correct": 3,
     "ref": "Romanos 5:9",
     "exp": "A justificação presente garante a salvação futura da ira vindoura.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1257,7 +1257,7 @@ module.exports = [
     "correct": 3,
     "ref": "Colossenses 1:20",
     "exp": "A cruz é o centro da reconciliação entre Deus e toda a criação.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1271,7 +1271,7 @@ module.exports = [
     "correct": 2,
     "ref": "1 João 1:7",
     "exp": "A purificação contínua pelo sangue de Cristo acompanha a comunhão na luz.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "sangue",
@@ -1285,7 +1285,7 @@ module.exports = [
     "correct": 3,
     "ref": "Mateus 26:28",
     "exp": "Na última ceia, Jesus liga seu sangue diretamente ao perdão dos pecados e à nova aliança.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1299,7 +1299,7 @@ module.exports = [
     "correct": 0,
     "ref": "Cânon bíblico protestante",
     "exp": "São 39 livros no Antigo Testamento e 27 no Novo Testamento, totalizando 66.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1313,7 +1313,7 @@ module.exports = [
     "correct": 1,
     "ref": "Cânon do Antigo Testamento",
     "exp": "O Antigo Testamento reúne 39 livros, do Gênesis a Malaquias.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1327,7 +1327,7 @@ module.exports = [
     "correct": 3,
     "ref": "Gênesis a Deuteronômio",
     "exp": "Pentateuco significa 'cinco rolos/livros': Gênesis, Êxodo, Levítico, Números e Deuteronômio.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1341,7 +1341,7 @@ module.exports = [
     "correct": 3,
     "ref": "Josué a Ester",
     "exp": "São 12 livros históricos, narrando a entrada em Canaã até o retorno do exílio.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1355,7 +1355,7 @@ module.exports = [
     "correct": 3,
     "ref": "Jó, Salmos, Provérbios, Eclesiastes e Cantares",
     "exp": "Os livros poéticos exploram sabedoria, louvor e reflexão sobre a vida diante de Deus.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1369,7 +1369,7 @@ module.exports = [
     "correct": 2,
     "ref": "Isaías, Jeremias, Lamentações, Ezequiel e Daniel",
     "exp": "São chamados 'maiores' pela extensão de seus escritos, não por maior importância.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1383,7 +1383,7 @@ module.exports = [
     "correct": 0,
     "ref": "Oséias a Malaquias",
     "exp": "São 12 livros proféticos mais curtos, de Oséias a Malaquias.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1397,7 +1397,7 @@ module.exports = [
     "correct": 1,
     "ref": "Composição original das Escrituras",
     "exp": "O Antigo Testamento foi escrito majoritariamente em hebraico (partes em aramaico), e o Novo Testamento em grego.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1411,7 +1411,7 @@ module.exports = [
     "correct": 1,
     "ref": "Mateus, Marcos, Lucas e João",
     "exp": "Os quatro evangelhos narram a vida, morte e ressurreição de Jesus sob perspectivas complementares.",
-    "dificuldade": "facil"
+    "dificuldade": "moderada"
   },
   {
     "cat": "panorama",
@@ -1425,6 +1425,6 @@ module.exports = [
     "correct": 1,
     "ref": "História da composição bíblica",
     "exp": "Reis, profetas, pastores, médicos e pescadores escreveram ao longo de séculos uma mensagem unificada.",
-    "dificuldade": "intermediaria"
+    "dificuldade": "moderada"
   }
 ];
